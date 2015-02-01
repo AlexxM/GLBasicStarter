@@ -41,7 +41,8 @@ namespace SimpleAndroidGame.Framework
         {
 
         }
-		//оптимизайия метода
+
+
         public void OnSensorChanged(SensorEvent e)
         {
 			IList<float> values = e.Values;
