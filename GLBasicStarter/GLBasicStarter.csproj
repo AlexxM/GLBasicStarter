@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D9CAD99-5915-4E3E-BC31-09AA865F48AA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GLBasicStarter</RootNamespace>
+    <AssemblyName>GLBasicStarter</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
+    <MandroidI18n />
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidStoreUncompressedFileExtensions />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GLBasicStarter.cs" />
+    <Compile Include="GLSurfaceViewTest.cs" />
+    <Compile Include="GLTriangleTest.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Framework\AccelerometerHandler.cs" />
+    <Compile Include="Framework\AndroidAudio.cs" />
+    <Compile Include="Framework\AndroidFastRenderView.cs" />
+    <Compile Include="Framework\AndroidFileIO.cs" />
+    <Compile Include="Framework\AndroidGame.cs" />
+    <Compile Include="Framework\AndroidGraphics.cs" />
+    <Compile Include="Framework\AndroidInput.cs" />
+    <Compile Include="Framework\AndroidMusic.cs" />
+    <Compile Include="Framework\AndroidPixmap.cs" />
+    <Compile Include="Framework\AndroidSound.cs" />
+    <Compile Include="Framework\KeyboardHandler.cs" />
+    <Compile Include="Framework\MultiTouchHandler.cs" />
+    <Compile Include="Framework\Pool.cs" />
+    <Compile Include="Framework\SingleTouchHandler.cs" />
+    <Compile Include="Framework\GL\AndroidGLGame.cs" />
+    <Compile Include="Framework\Interfaces\IAudio.cs" />
+    <Compile Include="Framework\Interfaces\IFileIO.cs" />
+    <Compile Include="Framework\Interfaces\IGame.cs" />
+    <Compile Include="Framework\Interfaces\IGraphics.cs" />
+    <Compile Include="Framework\Interfaces\IInput.cs" />
+    <Compile Include="Framework\Interfaces\IMusic.cs" />
+    <Compile Include="Framework\Interfaces\IPixmap.cs" />
+    <Compile Include="Framework\Interfaces\ISound.cs" />
+    <Compile Include="Framework\Interfaces\ITouchHandler.cs" />
+    <Compile Include="Framework\Interfaces\PoolObjectFactory.cs" />
+    <Compile Include="Framework\Interfaces\Screen.cs" />
+    <Compile Include="GLColoredTriangleTest.cs" />
+    <Compile Include="GLTexturedTriangleTest.cs" />
+    <Compile Include="Framework\GL\AndroidTexture.cs" />
+    <Compile Include="GLIndexedVerticesTest.cs" />
+    <Compile Include="GLBlendingTest.cs" />
+    <Compile Include="Framework\GL\AndroidVertices.cs" />
+    <Compile Include="Framework\GL\AndroidGLGraphics.cs" />
+    <Compile Include="BobModel.cs" />
+    <Compile Include="GLModelViewMatrixTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="Framework\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bobrgb888.png" />
+    <AndroidAsset Include="Assets\bobargb8888.png" />
+  </ItemGroup>
+</Project>
